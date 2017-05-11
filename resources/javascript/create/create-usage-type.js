@@ -53,7 +53,7 @@ class CreateUsageType extends React.Component {
           if(type==="update"||type==="view")
           {
                this.setState({
-                // searchSet:getCommonMasterById("wcms","","usagetypemaster",id).responseJSON["Designation"][0]
+                 searchSet:getCommonMasterById("wcms","usagetype","UsageType",id).responseJSON["UsageType"][0]
               })
           }
 
@@ -65,7 +65,7 @@ addOrUpdate(e,mode){
           var tempInfo=Object.assign({},this.state.searchSet) , type = getUrlVars()["type"];
             var body={
               "RequestInfo":requestInfo,
-              "Designation":tempInfo
+              "UsageType":tempInfo
             },_this=this;
             if (type == "update") {
                             $.ajax({
