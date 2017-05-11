@@ -69,7 +69,7 @@ addOrUpdate(e,mode){
             },_this=this;
             if (type == "update") {
                             $.ajax({
-                   url:'http://172.16.2.174'+"/wcms/usagetypemaster/" + this.state.searchSet.id + "/" + "_update?tenantId=" + tenantId,
+                   url:'http://172.16.2.174'+"/wcms/usagetype/" + this.state.searchSet.id + "/" + "_update?tenantId=" + tenantId,
                     type: 'POST',
                     dataType: 'json',
                     data:JSON.stringify(body),
@@ -89,7 +89,7 @@ addOrUpdate(e,mode){
                 });
             } else {
               $.ajax({
-                    url:'http://172.16.2.174'+"/wcms/usagetypemaster/_create?tenantId="+ tenantId ,
+                    url:'http://172.16.2.174'+"/wcms/usagetype/_create?tenantId="+ tenantId ,
                     type: 'POST',
                     dataType: 'json',
                     data:JSON.stringify(body),
